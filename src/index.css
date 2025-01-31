@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 @media print {
+  @page {
+    size: 100mm 148mm;
+    /* Set paper size to 100 x 148 mm (postcard size) */
+    margin: 10mm;
+    /* Set margins around the page to fit content */
+  }
+
   body {
     font-family: Arial, sans-serif;
-    font-size: 12pt;
+    font-size: 8pt;
+    /* Smaller font size to fit more content */
     margin: 0;
     padding: 0;
+    line-height: 1.2;
+    /* Reduce line height for tighter spacing */
   }
 
   .print\:hidden {
@@ -20,46 +30,54 @@
 
   .receipt-container {
     width: 100%;
-    padding: 20px;
-    margin: 0;
+    padding: 5mm;
+    /* Adjust padding to fit content within the postcard size */
     background-color: #fff;
     border: 1px solid #ddd;
   }
 
   .receipt-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    /* Reduced margin for the header */
   }
 
   .receipt-header h2 {
-    font-size: 18pt;
+    font-size: 12pt;
+    /* Adjust heading font size */
     margin: 0;
     font-weight: bold;
   }
 
   .receipt-header p {
-    font-size: 10pt;
+    font-size: 8pt;
+    /* Smaller date text */
     color: #777;
   }
 
   .receipt-body {
-    margin-top: 20px;
+    margin-top: 10px;
+    /* Reduced margin for body */
   }
 
   .receipt-body div {
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 2mm 0;
+    /* Reduced padding between lines */
     border-bottom: 1px solid #ddd;
   }
 
   .receipt-body div span {
-    font-size: 12pt;
+    font-size: 8pt;
+    /* Smaller font size for the receipt details */
   }
 
   .receipt-footer {
-    margin-top: 20px;
-    font-size: 9pt;
+    margin-top: 10px;
+    /* Reduced margin for footer */
+    font-size: 7pt;
+    /* Smaller footer text */
     text-align: center;
     color: #555;
   }
