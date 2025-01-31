@@ -6,8 +6,8 @@
   @page {
     size: 100mm 148mm;
     /* Set paper size to 100 x 148 mm (postcard size) */
-    margin-left: 1mm;
-    margin-right: 1mm;
+    margin-left: 2mm;
+    margin-right: 2mm;
     /* Set margins around the page to fit content */
   }
 
