@@ -6,7 +6,8 @@
   @page {
     size: 100mm 148mm;
     /* Set paper size to 100 x 148 mm (postcard size) */
-    margin: 10mm;
+    margin-left: 1mm;
+    margin-right: 1mm;
     /* Set margins around the page to fit content */
   }
 
@@ -29,11 +30,11 @@
   }
 
   .receipt-container {
-    width: 100%;
-    padding: 5mm;
-    /* Adjust padding to fit content within the postcard size */
+    width: 90mm;
+    padding: 3mm;
+
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid black;
   }
 
   .receipt-header {
