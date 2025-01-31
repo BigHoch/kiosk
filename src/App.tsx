@@ -21,11 +21,13 @@ function App() {
     window.print();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setDriverInfo(prev => ({
+    setDriverInfo((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -37,13 +39,20 @@ function App() {
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex items-center gap-2 mb-6">
               <FileCheck className="h-6 w-6 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-800">Driver Information Form</h1>
+              <h1 className="text-2xl font-bold text-gray-800">
+                Driver Information Form
+              </h1>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name</label>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    First Name
+                  </label>
                   <input
                     type="text"
                     id="firstName"
@@ -54,9 +63,14 @@ function App() {
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name</label>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Last Name
+                  </label>
                   <input
                     type="text"
                     id="lastName"
@@ -67,9 +81,14 @@ function App() {
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="licenseNumber" className="block text-sm font-medium text-gray-700">Driver's License Number</label>
+                  <label
+                    htmlFor="licenseNumber"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Driver's License Number
+                  </label>
                   <input
                     type="text"
                     id="licenseNumber"
@@ -80,9 +99,14 @@ function App() {
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="licenseState" className="block text-sm font-medium text-gray-700">State</label>
+                  <label
+                    htmlFor="licenseState"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    State
+                  </label>
                   <input
                     type="text"
                     id="licenseState"
@@ -96,7 +120,7 @@ function App() {
                   />
                 </div>
               </div>
-              
+
               <button
                 type="submit"
                 className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -109,38 +133,36 @@ function App() {
         </div>
 
         {/* Receipt Section - Visible when printing */}
-        <div className="hidden print:block">
-          <div className="border-2 border-gray-200 p-8 max-w-2xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold">Driver Information Receipt</h2>
-              <p className="text-gray-600">{new Date().toLocaleDateString()}</p>
+        <div className="hidden print:block receipt-container">
+          <div className="receipt-header">
+            <h2>Driver Information Receipt</h2>
+            <p>{new Date().toLocaleDateString()}</p>
+          </div>
+
+          <div className="receipt-body">
+            <div>
+              <span className="font-semibold">First Name:</span>
+              <span>{driverInfo.firstName}</span>
             </div>
-            
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">First Name:</span>
-                <span>{driverInfo.firstName}</span>
-              </div>
-              
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">Last Name:</span>
-                <span>{driverInfo.lastName}</span>
-              </div>
-              
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">License Number:</span>
-                <span>{driverInfo.licenseNumber}</span>
-              </div>
-              
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">State:</span>
-                <span>{driverInfo.licenseState}</span>
-              </div>
+
+            <div>
+              <span className="font-semibold">Last Name:</span>
+              <span>{driverInfo.lastName}</span>
             </div>
-            
-            <div className="mt-8 text-center text-sm text-gray-500">
-              <p>This receipt was generated on {new Date().toLocaleString()}</p>
+
+            <div>
+              <span className="font-semibold">License Number:</span>
+              <span>{driverInfo.licenseNumber}</span>
             </div>
+
+            <div>
+              <span className="font-semibold">State:</span>
+              <span>{driverInfo.licenseState}</span>
+            </div>
+          </div>
+
+          <div className="receipt-footer">
+            <p>This receipt was generated on {new Date().toLocaleString()}</p>
           </div>
         </div>
       </div>
