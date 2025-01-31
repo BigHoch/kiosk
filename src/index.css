@@ -12,16 +12,6 @@
     /* Set margins around the page to fit content */
   }
 
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 8pt;
-    /* Smaller font size to fit more content */
-    margin: 0;
-    padding: 0;
-    line-height: 1.2;
-    /* Reduce line height for tighter spacing */
-  }
-
   html,
   body {
     margin: 0;
@@ -29,7 +19,18 @@
   }
 
   body {
-    line-height: 1;
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    /* Increase line-height for more space between lines */
+  }
+
+  /* Increase font size after the "45th SFS vehicle pass" */
+  .after-vehicle-pass {
+    font-size: 9pt;
+    /* Increase font size slightly */
   }
 
   /* Remove any default border applied by Tailwind */

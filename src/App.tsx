@@ -164,7 +164,7 @@ function App() {
           </div>
 
           <div className="mt-8 text-center text-sm text-gray-500">
-            <p>For each additional trip on the installation, ensure Security Forces member receives this receipt</p>
+            <p>Return receipt to SF memeber for each return tripS</p>
           </div>
         </div>
       </div>
