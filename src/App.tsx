@@ -164,7 +164,7 @@ function App() {
           </div>
 
           <div className="mt-8 text-center text-sm text-gray-500">
-            <p>Return receipt to SF memeber for each return tripS</p>
+            <p>Return receipt to SF memeber for each return trip</p>
           </div>
         </div>
       </div>
