@@ -44,7 +44,7 @@ function App() {
     <div
       className="min-h-screen !bg-gray-100"
       style={{
-        backgroundImage: 'url(/src/public/images/flash.png)',  // Your background image
+        backgroundImage: 'url(/images/flash.png)',  // Your background image
         backgroundPosition: 'center',
         backgroundSize: '58%',  // Zoom out the image
         backgroundRepeat: 'no-repeat',  // Prevent the image from repeating
