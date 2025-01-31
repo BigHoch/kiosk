@@ -23,7 +23,7 @@
     font-size: 8pt;
     margin: 0;
     padding: 0;
-    line-height: 1.5;
+    line-height: 3;
     /* Increase line-height for more space between lines */
   }
 
@@ -53,4 +53,6 @@
     padding-left: 0;
     text-align: left;
   }
+
+
 }
