@@ -113,28 +113,57 @@ function App() {
           <div className="border-2 border-gray-200 p-8 max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold">45th SFS Vehicle Pass</h2>
-              <p className="text-gray-600">{new Date().toLocaleDateString()}</p>
+              <p className="text-gray-600">
+                {new Date().toLocaleDateString()} {new Date().toLocaleTimeString()}
+              </p>
             </div>
 
             <div className="space-y-4">
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">First Name:</span>
-                <span>{driverInfo.firstName}</span>
+              <div className="grid grid-cols-2 gap-x-2 border-b pb-2">
+                <label className="font-semibold text-left">First Name:</label>
+                <input
+                  type="text"
+                  className="border px-2 py-1 text-sm"
+                  value={driverInfo.firstName}
+                  readOnly
+                />
               </div>
 
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">Last Name:</span>
-                <span>{driverInfo.lastName}</span>
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-x-2 border-b pb-2">
+                  <label className="font-semibold text-left">Last Name:</label>
+                  <input
+                    type="text"
+                    className="border px-2 py-1 text-sm"
+                    value={driverInfo.lastName}
+                    readOnly
+                  />
+                </div>
               </div>
 
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">Vehicle Plate:</span>
-                <span>{driverInfo.VehiclePlate}</span>
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-x-2 border-b pb-2">
+                  <label className="font-semibold text-left">Vehicle Plate:</label>
+                  <input
+                    type="text"
+                    className="border px-2 py-1 text-sm"
+                    value={driverInfo.VehiclePlate}
+                    readOnly
+                  />
+                </div>
               </div>
 
-              <div className="grid grid-cols-2 border-b pb-2">
-                <span className="font-semibold">State:</span>
-                <span>{driverInfo.licenseState}</span>
+
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-x-2 border-b pb-2">
+                  <label className="font-semibold text-left">State:</label>
+                  <input
+                    type="text"
+                    className="border px-2 py-1 text-sm"
+                    value={driverInfo.licenseState}
+                    readOnly
+                  />
+                </div>
               </div>
             </div>
 
@@ -164,7 +193,7 @@ function App() {
           </div>
 
           <div className="mt-8 text-center text-sm text-gray-500">
-            <p>Return receipt to SF memeber</p>
+            <p>Return receipt to SF member</p>
           </div>
         </div>
       </div>
