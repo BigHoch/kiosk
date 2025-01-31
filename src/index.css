@@ -8,6 +8,7 @@
     /* Set paper size to 100 x 148 mm (postcard size) */
     margin-left: 2mm;
     margin-right: 2mm;
+    margin-top: 3mm;
     /* Set margins around the page to fit content */
   }
 
@@ -19,22 +20,6 @@
     padding: 0;
     line-height: 1.2;
     /* Reduce line height for tighter spacing */
-  }
-
-  .print\:hidden {
-    display: none;
-  }
-
-  .print\:block {
-    display: block;
-  }
-
-  .receipt-container {
-    width: 90mm;
-    padding: 3mm;
-
-    background-color: #fff;
-    border: 1px solid black;
   }
 
   .receipt-header {
