@@ -22,6 +22,16 @@
     /* Reduce line height for tighter spacing */
   }
 
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 1;
+  }
+
   /* Remove any default border applied by Tailwind */
   * {
     border: none !important;
@@ -32,4 +42,14 @@
     /* Force left-alignment */
   }
 
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
 }
